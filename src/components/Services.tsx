@@ -6,11 +6,11 @@ import {
   Gavel,
   Home,
   Scale,
-  Shield,
+  ShieldCheck,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
-const icons = [Home, Briefcase, Gavel, Scale, FileText, Shield];
+const icons = [Home, ShieldCheck, FileText, Gavel, Scale, Briefcase];
 
 export function Services() {
   const { t } = useLanguage();

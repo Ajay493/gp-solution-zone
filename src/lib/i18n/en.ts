@@ -4,7 +4,7 @@ export const en: Translation = {
   meta: {
     title: "GP Solution Zone | Advocate Gaurav Jain — Ajmer",
     description:
-      "Trusted legal counsel in Ajmer for property, civil, criminal, family, and corporate matters. Your legal puzzle, our expert solution.",
+      "Ajmer's trusted advocate for property registration, sale deeds, title verification, and real estate documentation. Your legal puzzle, our expert solution.",
   },
   nav: {
     home: "Home",
@@ -19,25 +19,29 @@ export const en: Translation = {
     title: "Your Legal Puzzle,",
     titleHighlight: "Our Expert Solution",
     subtitle:
-      "Experienced legal representation for individuals, families, and businesses across Rajasthan. Clear advice, strong advocacy, and results you can trust.",
+      "Specialist in property registration, sale deeds, and real estate documentation in Ajmer. Over 2,000 documents registered — trusted guidance for every property transaction.",
     ctaPrimary: "WhatsApp Consultation",
     ctaSecondary: "Our Practice Areas",
     stats: [
-      { value: "10+", label: "Years Experience" },
-      { value: "500+", label: "Cases Handled" },
-      { value: "24/7", label: "Client Support" },
+      { value: "7+", label: "Years Experience" },
+      { value: "Many", label: "Cases Handled" },
+      { value: "2000+", label: "Registered Documents" },
     ],
+    trustedLabel: "Trusted in Ajmer",
+    sinceYear: "Since 2019",
+    cardKnowledgeTitle: "Legal Knowledge",
+    cardKnowledgeSubtitle: "Know Your Rights. Protect Your Property.",
   },
   about: {
     label: "About Us",
     title: "Advocate Gaurav Jain",
     description:
-      "GP Solution Zone is a full-service legal practice based in Ajmer, dedicated to protecting your rights and simplifying complex legal matters. From property disputes to family law, we provide practical, client-focused solutions grounded in Indian law.",
+      "GP Solution Zone is Ajmer's dedicated property and registry law practice. We specialise in sale deed registration, title verification, stamp duty, and all property documentation before the Sub-Registrar — helping buyers, sellers, and families secure their assets with confidence.",
     points: [
-      "Personalized legal strategy for every client",
-      "Transparent communication at every stage",
-      "Deep expertise in Rajasthan property & civil law",
-      "Affordable consultation with no hidden costs",
+      "Expert in property registration & Sub-Registrar procedures",
+      "2,000+ documents successfully registered",
+      "Complete title verification before every transaction",
+      "Sale deeds, gift deeds, release deeds & family settlements",
     ],
     advocate: "Adv. Gaurav Jain",
     designation: "Founder & Principal Advocate",
@@ -45,45 +49,45 @@ export const en: Translation = {
   },
   services: {
     label: "Practice Areas",
-    title: "Comprehensive Legal Services",
+    title: "Property & Registry Specialists",
     subtitle:
-      "We handle a wide spectrum of legal matters with precision, integrity, and a commitment to your best outcome.",
+      "From document drafting to Sub-Registrar registration — end-to-end real estate legal services in Ajmer.",
     items: [
       {
-        title: "Property & Real Estate",
+        title: "Sale Deed Registration",
         description:
-          "Sale deeds, title verification, registration, partition suits, and property dispute resolution across Rajasthan.",
-        tags: ["Sale Deed", "Title Check", "Registration"],
+          "Complete sale deed drafting, stamp duty calculation, and registration before the Sub-Registrar in Ajmer.",
+        tags: ["Sale Deed", "Stamp Duty", "Registration"],
       },
       {
-        title: "Civil & Commercial",
+        title: "Title Verification",
         description:
-          "Contract drafting, breach of contract, recovery suits, partnership disputes, and commercial litigation.",
-        tags: ["Contracts", "Recovery", "Litigation"],
+          "Thorough title search, encumbrance checks, and land record verification before you buy or sell property.",
+        tags: ["Title Search", "Encumbrance", "Due Diligence"],
       },
       {
-        title: "Criminal Defence",
+        title: "Property Documentation",
         description:
-          "Bail applications, anticipatory bail, trial representation, and criminal appeals before competent courts.",
-        tags: ["Bail", "Trial", "Appeals"],
+          "Gift deeds, release deeds, settlement deeds, wills, power of attorney, and family arrangements.",
+        tags: ["Gift Deed", "Will", "POA"],
       },
       {
-        title: "Family Law",
+        title: "Property Disputes",
         description:
-          "Divorce, maintenance, child custody, domestic violence, and matrimonial dispute resolution.",
-        tags: ["Divorce", "Custody", "Maintenance"],
+          "Partition suits, boundary disputes, possession matters, and property litigation in Rajasthan courts.",
+        tags: ["Partition", "Possession", "Litigation"],
       },
       {
-        title: "Documentation",
+        title: "Stamp Duty & Compliance",
         description:
-          "Gift deeds, wills, release deeds, settlement deeds, power of attorney, and family arrangements.",
-        tags: ["Wills", "Gift Deed", "POA"],
+          "Accurate stamp duty assessment, registration compliance, and guidance on Rajasthan property laws.",
+        tags: ["Stamp Duty", "Compliance", "Rajasthan Law"],
       },
       {
-        title: "Legal Advisory",
+        title: "Civil & Family Matters",
         description:
-          "Pre-litigation advice, due diligence, compliance guidance, and dispute avoidance strategies.",
-        tags: ["Advisory", "Compliance", "Due Diligence"],
+          "Contract disputes, recovery suits, divorce, maintenance, and other civil matters alongside property work.",
+        tags: ["Civil", "Family", "Contracts"],
       },
     ],
   },
@@ -152,27 +156,27 @@ export const en: Translation = {
   },
   whyUs: {
     label: "Why Choose Us",
-    title: "Trusted Advocacy in Ajmer",
+    title: "Ajmer's Property Law Experts",
     items: [
       {
-        title: "Local Expertise",
+        title: "Registry Specialists",
         description:
-          "Deep knowledge of Rajasthan courts, land records, and local legal procedures.",
+          "2,000+ documents registered with deep knowledge of Ajmer Sub-Registrar office procedures.",
       },
       {
-        title: "Client-First Approach",
+        title: "Title Safety First",
         description:
-          "We listen first, explain clearly, and fight for outcomes that protect your interests.",
+          "Every transaction starts with thorough title verification — protecting you before you sign.",
       },
       {
-        title: "End-to-End Support",
+        title: "End-to-End Process",
         description:
-          "From document drafting to courtroom representation — one trusted advocate throughout.",
+          "From draft to registered deed — we handle stamp duty, documentation, and registration in one place.",
       },
       {
-        title: "Affordable Access",
+        title: "Trusted Since 2019",
         description:
-          "Quality legal services without unnecessary complexity or inflated fees.",
+          "Serving Ajmer families and property buyers with honest advice and transparent fees.",
       },
     ],
   },
@@ -182,9 +186,10 @@ export const en: Translation = {
     subtitle:
       "Schedule a consultation or reach out on WhatsApp for quick legal guidance.",
     addressLabel: "Address",
-    address: "C-94 Arihant Tower, BK Kaul Nagar, Ajmer — 305001, Rajasthan",
+    address:
+      "G.P. Solution Zone, Ambey Vihar, BK Kaul Nagar, Dayanand Colony, Ajmer, Rajasthan 305004, India",
     phoneLabel: "Phone / WhatsApp",
-    phone: "+91 77379 10900",
+    phone: "+91 70145 52855",
     whatsapp: "Chat on WhatsApp",
     hours: "Office Hours",
     hoursValue: "Mon – Sat: 10:00 AM – 7:00 PM",
@@ -193,6 +198,7 @@ export const en: Translation = {
     formMessage: "How can we help you?",
     formSubmit: "Send via WhatsApp",
     mapTitle: "Our Location — Ajmer",
+    mapLink: "Open in Google Maps →",
   },
   footer: {
     tagline: "Your Legal Puzzle, Our Expert Solution.",

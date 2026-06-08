@@ -6,7 +6,7 @@ A modern, bilingual (English / Hindi) static website for **GP Solution Zone**, a
 
 - English and Hindi language toggle (saved in browser)
 - Fully static — deploys to Vercel with zero configuration
-- WhatsApp integration (+91 77379 10900)
+- WhatsApp integration (+91 70145 52855)
 - Practice areas, legal knowledge section, contact form
 - Google Maps embed for Ajmer (exact pin can be updated later)
 - Mobile-responsive modern design

@@ -21,6 +21,10 @@ export type Translation = {
     ctaPrimary: string;
     ctaSecondary: string;
     stats: { value: string; label: string }[];
+    trustedLabel: string;
+    sinceYear: string;
+    cardKnowledgeTitle: string;
+    cardKnowledgeSubtitle: string;
   };
   about: {
     label: string;
@@ -83,6 +87,7 @@ export type Translation = {
     formMessage: string;
     formSubmit: string;
     mapTitle: string;
+    mapLink: string;
   };
   footer: {
     tagline: string;

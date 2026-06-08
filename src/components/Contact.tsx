@@ -3,7 +3,7 @@
 import { Clock, MapPin, MessageCircle, Phone } from "lucide-react";
 import { FormEvent, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { buildWhatsAppLink, PHONE_DISPLAY } from "@/lib/constants";
+import { buildWhatsAppLink, MAP_EMBED_URL, MAP_LINK, PHONE_DISPLAY } from "@/lib/constants";
 
 export function Contact() {
   const { t } = useLanguage();
@@ -49,6 +49,14 @@ export function Contact() {
                   <p className="mt-1 text-sm leading-relaxed text-navy-700/80">
                     {t.contact.address}
                   </p>
+                  <a
+                    href={MAP_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-block text-sm font-medium text-gold-600 hover:underline"
+                  >
+                    {t.contact.mapLink}
+                  </a>
                 </div>
               </div>
             </div>
@@ -162,8 +170,8 @@ export function Contact() {
                 {t.contact.mapTitle}
               </p>
               <iframe
-                title="Ajmer Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113874.84784784785!2d74.55!3d26.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be50ffc7e8fb1%3A0x3cc57116e729d2d!2sAjmer%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                title="GP Solution Zone — Ajmer"
+                src={MAP_EMBED_URL}
                 width="100%"
                 height="280"
                 style={{ border: 0 }}

@@ -48,13 +48,15 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="mt-12 grid grid-cols-3 gap-4 border-t border-white/10 pt-8 sm:gap-8">
+          <div className="mt-12 grid grid-cols-3 gap-4 border-t border-white/10 pt-8 sm:gap-6">
             {t.hero.stats.map((stat) => (
               <div key={stat.label}>
-                <p className="font-display text-2xl font-bold text-gold-400 sm:text-3xl">
+                <p className="font-display text-xl font-bold text-gold-400 sm:text-2xl lg:text-3xl">
                   {stat.value}
                 </p>
-                <p className="mt-1 text-xs text-white/60 sm:text-sm">{stat.label}</p>
+                <p className="mt-1 text-xs leading-snug text-white/60 sm:text-sm">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>
@@ -74,17 +76,19 @@ export function Hero() {
               </p>
               <div className="mt-8 w-full rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
                 <p className="text-xs tracking-widest text-gold-400 uppercase">
-                  Legal Knowledge
+                  {t.hero.cardKnowledgeTitle}
                 </p>
                 <p className="mt-2 font-display text-lg text-white">
-                  Know Your Rights. Protect Your Property.
+                  {t.hero.cardKnowledgeSubtitle}
                 </p>
               </div>
             </div>
           </div>
           <div className="absolute -bottom-4 -left-4 hidden rounded-2xl border border-gold-400/20 bg-navy-900/90 px-5 py-4 shadow-xl backdrop-blur sm:block">
-            <p className="text-xs text-gold-400">Trusted in Ajmer</p>
-            <p className="font-display text-lg font-semibold text-white">Since 2014</p>
+            <p className="text-xs text-gold-400">{t.hero.trustedLabel}</p>
+            <p className="font-display text-lg font-semibold text-white">
+              {t.hero.sinceYear}
+            </p>
           </div>
         </div>
       </div>

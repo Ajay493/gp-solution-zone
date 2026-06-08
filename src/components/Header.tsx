@@ -15,7 +15,8 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -27,22 +28,38 @@ export function Header() {
     };
   }, [open]);
 
+  const onHero = !scrolled;
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass border-b border-white/20 shadow-lg" : "bg-transparent"
+        onHero
+          ? "border-b border-white/10 bg-navy-950/85 shadow-lg backdrop-blur-md"
+          : "glass border-b border-navy-900/10 shadow-md"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link href="#home" className="group flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-navy-900 text-gold-400 shadow-md transition group-hover:scale-105">
+          <div
+            className={`flex h-11 w-11 items-center justify-center rounded-full shadow-md transition group-hover:scale-105 ${
+              onHero
+                ? "border border-gold-400/30 bg-navy-900 text-gold-400"
+                : "bg-navy-900 text-gold-400"
+            }`}
+          >
             <Scale className="h-5 w-5" />
           </div>
           <div className="leading-tight">
-            <p className="font-display text-lg font-bold tracking-tight text-navy-900">
+            <p
+              className={`font-display text-lg font-bold tracking-tight ${
+                onHero ? "text-white" : "text-navy-900"
+              }`}
+            >
               GP Solution Zone
             </p>
-            <p className="text-xs text-navy-700/70">Adv. Gaurav Jain</p>
+            <p className={`text-xs ${onHero ? "text-white/60" : "text-navy-700/70"}`}>
+              Adv. Gaurav Jain
+            </p>
           </div>
         </Link>
 
@@ -51,7 +68,11 @@ export function Header() {
             <a
               key={id}
               href={`#${id}`}
-              className="text-sm font-medium text-navy-800 transition hover:text-gold-600"
+              className={`text-sm font-medium transition ${
+                onHero
+                  ? "text-white/80 hover:text-gold-400"
+                  : "text-navy-800 hover:text-gold-600"
+              }`}
             >
               {t.nav[id]}
             </a>
@@ -59,7 +80,13 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <div className="flex rounded-full border border-navy-900/10 bg-white/60 p-1">
+          <div
+            className={`flex rounded-full p-1 ${
+              onHero
+                ? "border border-white/15 bg-white/10"
+                : "border border-navy-900/10 bg-white/60"
+            }`}
+          >
             {(["en", "hi"] as Locale[]).map((lang) => (
               <button
                 key={lang}
@@ -67,8 +94,12 @@ export function Header() {
                 onClick={() => setLocale(lang)}
                 className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${
                   locale === lang
-                    ? "bg-navy-900 text-gold-400"
-                    : "text-navy-700 hover:text-navy-900"
+                    ? onHero
+                      ? "bg-gold-500 text-navy-950"
+                      : "bg-navy-900 text-gold-400"
+                    : onHero
+                      ? "text-white/70 hover:text-white"
+                      : "text-navy-700 hover:text-navy-900"
                 }`}
               >
                 {localeLabels[lang]}
@@ -79,7 +110,11 @@ export function Header() {
             href={buildWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-navy-900 px-5 py-2.5 text-sm font-semibold text-gold-400 transition hover:bg-navy-800"
+            className={`rounded-full px-5 py-2.5 text-sm font-semibold transition ${
+              onHero
+                ? "bg-gold-500 text-navy-950 hover:bg-gold-400"
+                : "bg-navy-900 text-gold-400 hover:bg-navy-800"
+            }`}
           >
             {t.nav.cta}
           </a>
@@ -87,7 +122,7 @@ export function Header() {
 
         <button
           type="button"
-          className="rounded-lg p-2 text-navy-900 lg:hidden"
+          className={`rounded-lg p-2 lg:hidden ${onHero ? "text-white" : "text-navy-900"}`}
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -96,14 +131,22 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="glass border-t border-white/20 px-4 py-6 lg:hidden">
+        <div
+          className={`border-t px-4 py-6 lg:hidden ${
+            onHero
+              ? "border-white/10 bg-navy-950/95 backdrop-blur-md"
+              : "glass border-white/20"
+          }`}
+        >
           <nav className="flex flex-col gap-4">
             {navIds.map((id) => (
               <a
                 key={id}
                 href={`#${id}`}
                 onClick={() => setOpen(false)}
-                className="text-base font-medium text-navy-900"
+                className={`text-base font-medium ${
+                  onHero ? "text-white" : "text-navy-900"
+                }`}
               >
                 {t.nav[id]}
               </a>
@@ -117,8 +160,12 @@ export function Header() {
                 onClick={() => setLocale(lang)}
                 className={`flex-1 rounded-full py-2 text-sm font-semibold ${
                   locale === lang
-                    ? "bg-navy-900 text-gold-400"
-                    : "border border-navy-900/15 text-navy-800"
+                    ? onHero
+                      ? "bg-gold-500 text-navy-950"
+                      : "bg-navy-900 text-gold-400"
+                    : onHero
+                      ? "border border-white/20 text-white"
+                      : "border border-navy-900/15 text-navy-800"
                 }`}
               >
                 {localeLabels[lang]}
@@ -129,7 +176,11 @@ export function Header() {
             href={buildWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 block rounded-full bg-navy-900 py-3 text-center text-sm font-semibold text-gold-400"
+            className={`mt-4 block rounded-full py-3 text-center text-sm font-semibold ${
+              onHero
+                ? "bg-gold-500 text-navy-950"
+                : "bg-navy-900 text-gold-400"
+            }`}
           >
             {t.nav.cta}
           </a>
