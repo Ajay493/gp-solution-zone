@@ -19,27 +19,24 @@ export function Footer() {
               <p className="font-display text-lg font-bold text-white">
                 GP Solution Zone
               </p>
-              <p className="text-sm text-gold-400">{t.footer.tagline}</p>
+              <p className="text-sm text-white/60">{t.footer.tagline}</p>
             </div>
           </div>
           <a
             href={buildWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-gold-400/30 px-5 py-2 text-sm font-semibold text-gold-400 transition hover:bg-gold-400/10"
+            className="rounded-full border border-gold-400/30 px-5 py-2 text-sm font-medium text-gold-400 transition hover:bg-gold-400/10"
           >
             {t.contact.whatsapp}
           </a>
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-8 text-center">
-          <p className="font-display text-sm font-semibold tracking-widest text-gold-400 uppercase">
-            {t.footer.slogan}
-          </p>
-          <p className="mx-auto mt-4 max-w-2xl text-xs leading-relaxed text-white/50">
+        <div className="mt-10 border-t border-white/10 pt-8">
+          <p className="mx-auto max-w-3xl text-center text-xs leading-relaxed text-white/55">
             {t.footer.disclaimer}
           </p>
-          <p className="mt-6 text-xs text-white/40">{t.footer.rights}</p>
+          <p className="mt-6 text-center text-xs text-white/40">{t.footer.rights}</p>
         </div>
       </div>
     </footer>

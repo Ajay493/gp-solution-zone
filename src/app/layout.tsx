@@ -19,19 +19,20 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
-  title: "GP Solution Zone | Advocate Gaurav Jain — Ajmer",
+  title: "Advocate Gaurav Jain | GP Solution Zone — Ajmer",
   description:
-    "Trusted legal counsel in Ajmer for property, civil, criminal, family, and corporate matters.",
+    "Information about the legal practice of Advocate Gaurav Jain in Ajmer relating to property documentation, registration, and allied legal matters.",
   keywords: [
-    "lawyer Ajmer",
     "advocate Ajmer",
-    "property lawyer Rajasthan",
+    "property documentation Ajmer",
+    "property registration Ajmer",
     "GP Solution Zone",
     "Gaurav Jain advocate",
   ],
   openGraph: {
-    title: "GP Solution Zone | Advocate Gaurav Jain",
-    description: "Your Legal Puzzle, Our Expert Solution.",
+    title: "Advocate Gaurav Jain | GP Solution Zone",
+    description:
+      "Property documentation, registration and legal drafting — Ajmer.",
     locale: "en_IN",
     type: "website",
   },

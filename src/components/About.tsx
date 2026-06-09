@@ -45,21 +45,18 @@ export function About() {
               </div>
               <div className="mt-8 space-y-4 border-t border-navy-900/8 pt-8">
                 <div className="flex justify-between text-sm">
-                  <span className="text-navy-700/70">Practice</span>
+                  <span className="text-navy-700/70">{t.about.practiceLabel}</span>
                   <span className="font-medium text-navy-900">{t.about.experience}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-navy-700/70">Location</span>
+                  <span className="text-navy-700/70">{t.about.locationLabel}</span>
                   <span className="font-medium text-navy-900">Ajmer, Rajasthan</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-navy-700/70">Firm</span>
+                  <span className="text-navy-700/70">{t.about.firmLabel}</span>
                   <span className="font-medium text-navy-900">GP Solution Zone</span>
                 </div>
               </div>
-              <blockquote className="mt-8 rounded-2xl bg-cream-100 p-5 font-display text-lg leading-snug text-navy-800 italic">
-                &ldquo;{t.footer.tagline}&rdquo;
-              </blockquote>
             </div>
             <div className="absolute -top-4 -right-4 -z-10 h-full w-full rounded-3xl bg-gold-400/15" />
           </div>

@@ -6,7 +6,6 @@ import { Hero } from "@/components/Hero";
 import { Knowledge } from "@/components/Knowledge";
 import { Services } from "@/components/Services";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { WhyUs } from "@/components/WhyUs";
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
         <About />
         <Services />
         <Knowledge />
-        <WhyUs />
         <Contact />
       </main>
       <Footer />

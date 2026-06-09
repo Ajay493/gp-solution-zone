@@ -20,9 +20,7 @@ export type Translation = {
     subtitle: string;
     ctaPrimary: string;
     ctaSecondary: string;
-    stats: { value: string; label: string }[];
-    trustedLabel: string;
-    sinceYear: string;
+    practiceAreas: string[];
     cardKnowledgeTitle: string;
     cardKnowledgeSubtitle: string;
   };
@@ -34,6 +32,9 @@ export type Translation = {
     advocate: string;
     designation: string;
     experience: string;
+    practiceLabel: string;
+    locationLabel: string;
+    firmLabel: string;
   };
   services: {
     label: string;
@@ -42,7 +43,6 @@ export type Translation = {
     items: {
       title: string;
       description: string;
-      tags: string[];
     }[];
   };
   knowledge: {
@@ -63,14 +63,6 @@ export type Translation = {
     };
     quote: string;
   };
-  whyUs: {
-    label: string;
-    title: string;
-    items: {
-      title: string;
-      description: string;
-    }[];
-  };
   contact: {
     label: string;
     title: string;
@@ -85,6 +77,7 @@ export type Translation = {
     formName: string;
     formPhone: string;
     formMessage: string;
+    formDefaultMessage: string;
     formSubmit: string;
     mapTitle: string;
     mapLink: string;
@@ -93,6 +86,5 @@ export type Translation = {
     tagline: string;
     disclaimer: string;
     rights: string;
-    slogan: string;
   };
 };

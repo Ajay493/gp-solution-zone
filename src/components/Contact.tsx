@@ -14,7 +14,7 @@ export function Contact() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     const text = [
-      `Hello, I would like to consult regarding my legal matter.`,
+      t.contact.formDefaultMessage,
       name && `Name: ${name}`,
       phone && `Phone: ${phone}`,
       message && `Message: ${message}`,

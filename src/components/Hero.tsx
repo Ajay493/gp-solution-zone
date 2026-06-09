@@ -21,9 +21,11 @@ export function Hero() {
             {t.hero.badge}
           </span>
 
-          <h1 className="mt-6 font-display text-4xl leading-tight font-bold text-white sm:text-5xl lg:text-6xl">
+          <h1 className="mt-6 font-display text-3xl leading-tight font-bold text-white sm:text-4xl lg:text-5xl">
             {t.hero.title}
-            <span className="mt-1 block text-gradient-gold">{t.hero.titleHighlight}</span>
+            <span className="mt-3 block text-xl font-semibold text-gold-400 sm:text-2xl lg:text-3xl">
+              {t.hero.titleHighlight}
+            </span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/75">
@@ -35,7 +37,7 @@ export function Hero() {
               href={buildWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-7 py-3.5 text-sm font-bold text-navy-950 transition hover:bg-gold-400"
+              className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-7 py-3.5 text-sm font-semibold text-navy-950 transition hover:bg-gold-400"
             >
               {t.hero.ctaPrimary}
               <ArrowRight className="h-4 w-4" />
@@ -48,16 +50,14 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="mt-12 grid grid-cols-3 gap-4 border-t border-white/10 pt-8 sm:gap-6">
-            {t.hero.stats.map((stat) => (
-              <div key={stat.label}>
-                <p className="font-display text-xl font-bold text-gold-400 sm:text-2xl lg:text-3xl">
-                  {stat.value}
-                </p>
-                <p className="mt-1 text-xs leading-snug text-white/60 sm:text-sm">
-                  {stat.label}
-                </p>
-              </div>
+          <div className="mt-12 flex flex-wrap gap-3 border-t border-white/10 pt-8">
+            {t.hero.practiceAreas.map((area) => (
+              <span
+                key={area}
+                className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/75"
+              >
+                {area}
+              </span>
             ))}
           </div>
         </div>
@@ -78,17 +78,11 @@ export function Hero() {
                 <p className="text-xs tracking-widest text-gold-400 uppercase">
                   {t.hero.cardKnowledgeTitle}
                 </p>
-                <p className="mt-2 font-display text-lg text-white">
+                <p className="mt-2 text-sm leading-relaxed text-white/80">
                   {t.hero.cardKnowledgeSubtitle}
                 </p>
               </div>
             </div>
-          </div>
-          <div className="absolute -bottom-4 -left-4 hidden rounded-2xl border border-gold-400/20 bg-navy-900/90 px-5 py-4 shadow-xl backdrop-blur sm:block">
-            <p className="text-xs text-gold-400">{t.hero.trustedLabel}</p>
-            <p className="font-display text-lg font-semibold text-white">
-              {t.hero.sinceYear}
-            </p>
           </div>
         </div>
       </div>
